@@ -2,7 +2,7 @@
 
 > An enterprise-grade, full-stack credit risk platform combining deterministic machine learning (LightGBM), Explainable AI (SHAP), and RAG-grounded Generative AI — designed for underwriting operations at scale (Slice, Uni, KreditBee).
 
-[🌐 Live Demo](https://eight-clocks-care.loca.lt) · [📖 Documentation](#-table-of-contents) · [🚀 Get Started](#-local-installation)
+[🌐 Live Demo](https://credit-lens-three.vercel.app/) · [📖 Documentation](#-table-of-contents) · [🚀 Get Started](#-local-installation)
 
 ---
 
