@@ -4,6 +4,7 @@ import type { PredictResponse, CopilotResponse } from './types';
 const BASE = '/api';
 
 export interface CustomerFeatures {
+  loan_amount?: number;
   RevolvingUtilizationOfUnsecuredLines: number;
   age: number;
   'NumberOfTime30-59DaysPastDueNotWorse': number;

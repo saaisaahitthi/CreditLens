@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Calculator, ShieldAlert, CheckCircle2, TrendingUp, DollarSign, Percent } from 'lucide-react';
 
 interface Props {
@@ -18,7 +17,7 @@ export default function CreditRecommendationPanel({
   dtiRatio,
   utilization,
 }: Props) {
-  const [overrideAmount, setOverrideAmount] = useState<number | null>(null);
+  const overrideAmount = null;
 
   // Risk-based pricing matrix
   let baseApr = 13.5;

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { FileWarning, Copy, CheckCheck, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
+import type { ShapFactor } from '../types';
 
 interface Props {
   customerId: string;
   riskCategory: string;
   riskProbability: number;
-  topRiskFactors: Array<{ feature: string; shap_value: number }>;
+  topRiskFactors: ShapFactor[];
   onGenerate: (question: string) => Promise<{ llm_output: string }>;
 }
 
@@ -26,7 +27,7 @@ export default function AdverseActionPanel({ customerId, riskCategory, riskProba
     try {
       const topFactors = topRiskFactors
         .slice(0, 3)
-        .map((f, i) => `${i + 1}. ${f.feature.replace(/_/g, ' ')} (SHAP impact: +${f.shap_value.toFixed(3)})`)
+        .map((f, i) => `${i + 1}. ${f.feature.replace(/_/g, ' ')} (SHAP impact: +${(f.shap_value_log_odds || 0).toFixed(3)})`)
         .join('\n');
 
       const prompt = `You are a senior credit analyst at a regulated financial institution. 
